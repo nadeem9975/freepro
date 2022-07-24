@@ -7,10 +7,10 @@ RUN yum update -y
 RUN yum install -y httpd \
  zip \
  unzip
-ADD https://www.free-css.com/assets/files/free-css-layouts/download/page1/css-layout-10.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page274/branding.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip css-layout-10.zip
-RUN cp -rvf layout10/* .
-RUN rm -rf layout10 css-layout-10.zip
+RUN unzip branding.zip
+RUN cp -rvf branding/* .
+RUN rm -rf branding branding.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
